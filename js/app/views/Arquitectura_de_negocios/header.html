@@ -1,0 +1,13 @@
+<!-- //controller scope as headerCtrl -->
+<header class="header container-fluid">
+    <div class="header-content">
+        <div class="header-text">
+        <div class="row editable-text header-message">
+            <div class="message" ng-class="{'fly-from-right-dsp': headerCtrl.isStarted}" >{{headerCtrl.curretMessage}}</div>
+        </div>
+        <div class="row">
+           <button type="button" class="btn btn-primary" ng-click="mainCtrl.startForm($event.currentTarget)">COMIENZA YA!</button>
+        </div>
+        </div>
+    </div>
+</header>

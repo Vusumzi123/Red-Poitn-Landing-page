@@ -1,0 +1,281 @@
+.editable1{
+    .secc1, .secc2{
+        background-color: $background;
+        .row-title{
+        }
+        .row-body{
+            .row-element{
+                .editable{
+                    @extend %font-lobster;
+                }
+            }
+        }
+    }
+    .secc2{
+        background: rgba(226,226,226,1);
+        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(80%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff', GradientType=0 );
+        .row-body{
+            img{
+                width: 18vw;
+            }
+            .row-element{
+                position: relative !important;
+                .wrapper{
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    position: relative !important;
+                    border: none;
+                    .flipper{
+                        @extend %flex-center;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 2px !important;
+                        left: 0px !important;
+                        @extend %wordwrap;
+                        height: 17vw;
+                        width: 17vw;
+                        background-color: transparentize($accent, 0.2);
+                        border-radius: 50%;
+                        padding: 12px !important;
+                        margin: 0px 9px !important;
+                        transform: rotateY(90deg);
+                        opacity: 0;
+                        transition: all 300ms ease-in;
+                        *{
+                            color: white;
+                            @extend %font-comfortaa;
+                            letter-spacing: -1.6px;
+                            font-size: 2.1rem;
+                            position: relative !important;
+                            @include text-shadow(3px, 3px, 8px, rgba(2,2,2,0.60));
+                            
+                        }
+                        .bold{
+                            font-size: 2.6rem !important;
+                        }
+                    }
+                }
+
+                .wrapper:hover .flipper{
+                    transform: rotateY(0deg);
+                    opacity: 1;
+                }
+                
+            }
+
+        }
+        &:after{
+            content: "";
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 8px;
+            border-bottom: 4px solid lighten($medium-text, 30);
+        }
+    }
+}
+
+
+.editable2{
+    .secc1, .secc2{
+        .row-title{
+        }
+        .row-body{
+            .row-element{
+                .editable{
+                    font-size: 20px;
+                }
+                img{
+                    width: 120px;
+                } 
+                *{
+                    margin: 18px;
+                    @extend %wordwrap;
+                }
+                p{
+                    max-width: 500px !important;
+                }
+            }
+        }
+    }
+    .secc1{
+        .row{
+            .row-element{
+                @extend %flex;
+                p{
+                    height: 100% !important;
+                    flex: 1;
+                }
+            }
+        }
+    }
+    .secc2{
+        .row-title{
+            margin: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1700px){
+    .editable{
+        .secc2{
+            .row-body{
+                .row-element{
+                    .wrapper{
+                        .flipper{
+                            *{
+                                font-size: 1.2rem;
+                            }
+                            .bold{
+                                font-size: 2rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .editable2{
+        .secc1, .secc2{
+            .row-body{
+                .row-element{
+                    .wrapper{
+                        .editable{
+                            font-size: 16px;
+                        }
+                        img{
+                            width: 70px;
+                        } 
+                        *{
+                            margin: 8px;
+                        }
+                        p{
+                            max-width: 500px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//tablet mode
+@media only screen and (max-width: 990px){
+    .editable{
+        .secc1, .secc2{
+            padding: 0px !important;
+            margin: 0 !important;
+            .row-title{
+                padding: 12px !important;
+                color: $medium-text;
+            }
+            .row-body{
+                margin: 0 !important;
+                padding:10px !important;
+                .row-element{
+                    padding: 20px!important;
+                    .wrapper{
+                        .flipper{
+                            position: relative;
+                            height: auto;
+                            width: 18vw;
+                            background-color: transparent;
+                            border-radius: none;
+                            transform: rotateY(0deg);
+                            opacity: 1;
+                            *{
+                                color: $medium-text;
+                                font-size: 1.7rem;
+                                letter-spacing: -1px;
+                                -webkit-text-shadow: none;
+                                -moz-text-shadow: none;
+                                text-shadow: none;
+                            }
+                            .bold{
+                                display: none !important;
+                                font-size: 2.2rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// phone view
+@media only screen and (max-width: 575px){
+    .editable{
+        .secc1, .secc2{
+            .row-body{
+                .row-element{
+                    img{
+                        width: 60vw !important;
+                    }
+                    .wrapper{
+                        .flipper{
+                            flex-direction: column;
+                            position: relative;
+                            height: auto;
+                            width: 80vw;
+                            background-color: transparent;
+                            transform: rotateY(0deg);
+                            opacity: 1;
+                            *{
+                                color: $medium-text;
+                                font-size: 2.1rem;
+                                letter-spacing: 0px;
+                                -webkit-text-shadow: none;
+                                -moz-text-shadow: none;
+                                text-shadow: none;
+                            }
+                            .bold{
+                                display: none !important;
+                                font-size: 2.6rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .editable2{
+        .secc1, .secc2{
+            .row-title{
+                .editable{
+                    font-size: 32px;
+                }
+            }
+            .row-body{
+                .row-element{
+                    margin: 20px 0px;
+                    .editable{
+                        font-size: 20px;
+                    }
+                    img{
+                        width: 80px !important;
+                    } 
+                    *{
+                        margin: 8px;
+                    }
+                    p{
+                        max-width: 600px !important;
+                    }
+                }
+            }
+        }
+        .secc2{
+            
+        }
+    }
+}

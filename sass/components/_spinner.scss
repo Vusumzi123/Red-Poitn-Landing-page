@@ -1,0 +1,38 @@
+.loading-lights-out{
+  z-index: 16;
+  background-color: transparentize(#333, 0.2);
+  @extend %flex-center;
+  flex-direction: column !important;
+  color: transparentize(lightgrey, 0.3);;
+  .spinner{
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparentize(lightgrey, 0.3);
+    position: relative !important;
+    border-radius: 50%;
+    @extend %flex-center;
+    &:after, &:before{
+      content: '';
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      border-radius: 50%;
+      position: absolute !important;
+      border: 4px solid transparent;
+      border-bottom: 4px solid $primary;
+      border-top: 4px solid $primary;
+      animation: spin 1800ms infinite linear;
+    }
+  }
+}
+
+.lights-out-complete{
+  background-color: $light-text !important;
+  color: $medium-text;
+  .spinner{
+    background-color: transparentize($medium-text, 0.7);
+  }
+}

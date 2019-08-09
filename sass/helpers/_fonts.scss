@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+%font-roboto{
+    font-family: 'Roboto', sans-serif; font-weight: 400; font-style: normal;
+}
+
+
+//Lobster
+%font-lobster{
+    font-family: 'Lobster', cursive; font-weight: 400; font-style: normal;
+}
+
+//Comfortaa
+%font-comfortaa{
+    font-family: 'Comfortaa', sans-serif; font-weight: 400; font-style: normal;
+}
+
+*{
+    @extend %font-roboto;
+}
+
+//TEST fonts
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Dekko|Lobster|Poiret+One');
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="rp1.ico" type="image/x-icon">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#C41E2E">
+    <title>Red Point</title>
+
+    <!-- <base href="/"> -->
+
+    <!--      main css     -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+    <!--      jQuery     -->
+    <script src="packages/jquery-3.2.1/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <!--      Popper.js     -->
+    <script src="packages/Popper.js-1.12.9/popper.min.js" charset="utf-8"></script>
+    <!--      bootstrap     -->
+    <link rel="stylesheet" href="packages/Bootstrap-4.0.0/css/bootstrap.min.css">
+    <script src="packages/Bootstrap-4.0.0/js/bootstrap.min.js" charset="utf-8"></script>
+    <!--      AngularJs     -->
+    <script src="packages/AngularJs-1.6.x/angular.min.js" charset="utf-8"></script>
+    <script src="packages/AngularJs-1.6.x/angular-route.min.js" charset="utf-8"></script>
+    <script src="packages/AngularJs-1.6.x/angular-cookies.min.js"></script>
+    <script src="packages/AngularJs-1.6.x/angular-touch.min.js"></script>
+    <!--fontawesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- scroll -->
+    <script src="packages/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body ng-app="app" ng-controller="mainController as mainCtrl">
+
+    <spinner></spinner>
+
+    <navbar ></navbar>
+
+    <!-- <arquitectura-de-negocios></arquitectura-de-negocios> -->
+
+    <div ng-view></div>
+
+    <custom-footer></custom-footer>
+
+    <formulario></formulario>
+
+
+  </body>
+  <!-- old website -->
+  <!-- <script src="old/js/carousel.js"></script>
+  <script src="old/js/jquery.bxslider.min.js"></script>
+  <script src="old/validadorCorreo.js"></script> -->
+
+  <!-- main App -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/router.js"></script>
+  <!-- controllers -->
+  <script src="js/app/controllers/main_controller.js"></script>
+  <script src="js/app/controllers/spinner_controller.js"></script>
+  <script src="js/app/controllers/navbar_controller.js"></script>
+  <script src="js/app/controllers/header_controller.js"></script>
+  <script src="js/app/controllers/form_controller.js"></script>
+  <!-- directives -->
+  <script src="js/app/directives/spinner_directive.js"></script>
+  <script src="js/app/directives/arquitectura_de_negocios/arquitectura_de_negocios_directive.js"></script>
+  <script src="js/app/directives/arquitectura_de_negocios/header_directive.js"></script>
+  <script src="js/app/directives/arquitectura_de_negocios/area_editable_1_directive.js"></script>
+  <script src="js/app/directives/arquitectura_de_negocios/area_editable_2_directive.js"></script>
+  <script src="js/app/directives/navbar_directive.js"></script>
+  <script src="js/app/directives/custom_footer_directive.js"></script>
+  <script src="js/app/directives/afterRender.js"></script>
+  <script src="js/app/directives/arquitectura_de_negocios/form_directive.js"></script>
+  <!-- main js -->
+  <script src="js/main.js"></script>
+</html>

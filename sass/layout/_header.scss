@@ -1,0 +1,100 @@
+.header{
+    z-index: 0;
+    // backgound image
+    background-image: url("../resources/image/headerFullHD.jpg");
+    min-height: $view-height;
+    padding: 0px 10vw !important;
+    @extend %flex-right;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .header-content{
+        @extend %flex-center;
+        height: 100%; 
+        width: 65%;
+        flex-direction: column;
+        .header-text{
+            max-width: 75%;
+            @include text-shadow(4px, 4px, 10px, rgba(2,2,2,0.70));
+            .header-message{
+                height: 50%;
+                @extend %flex-center-bottom;
+                .message{
+                    @extend %wordwrap;
+                    opacity: 0;
+                    font-size: 60px;
+                }
+                // margin-bottom: 20vh;
+            }
+            .row{
+                height: 50vh !important;
+                @extend %flex-center;
+                .btn-primary{
+                    margin-top: 40px;
+                    @include box-shadow (3px, 3px, 8px, 0px, rgba(2,2,2,0.50));
+                }
+                &:nth-child(2){
+                    @extend %flex-center-top;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .header{
+        .header-content{
+            width: 80% !important;
+        }
+    } 
+}
+
+
+@media only screen and (max-width: 990px){
+    .header{
+        background-image: url("../resources/image/headerMax.jpg");
+        min-height: $view-height;
+        color: white;
+        -webkit-justify-content : center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .header-content{
+            width: 80% !important;
+            align-content: space-between;
+            .header-text{
+                position: absolute !important;
+                bottom: 0;
+                .header-message{
+                    .message{
+                        font-size: 50px !important; 
+                    }
+                }
+            }
+            
+        }
+    } 
+}
+
+@media only screen and (max-height: 800px){
+    .header{
+        .header-content{
+            .header-text{
+                .header-message{
+                    .message{
+                        font-size: 35px !important; 
+                    }
+                }
+            }
+            
+        }
+    } 
+}
+
+@media only screen and (max-width: 575px){
+    .header{
+        background-image: url("../resources/image/headerShort.jpg");
+    }
+}

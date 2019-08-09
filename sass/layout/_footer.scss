@@ -1,0 +1,33 @@
+footer{
+    div{
+        padding: 6px;
+    }
+    .secc1{
+        div{
+            padding: 18px !important;
+            @extend %flex-center;
+            img{
+                width: 100px;
+            }
+        }
+    }
+    .secc2{
+        background-color: $medium-text;
+        padding: 18px !important;
+        div{
+            color: white;
+            @extend %flex-center;
+            *{
+                color: white;
+
+            }
+
+        }
+        div:nth-child(1){
+            font-size: 35px;
+            a{
+                margin: 0px 8px;
+            }
+        }
+    }
+}

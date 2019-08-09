@@ -1,0 +1,23 @@
+#form{
+    @extend %flex-center;
+    background-color: $form-background;
+    .close-wrapper{
+        z-index: 21;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: $light-text;
+        font-size: 0.8em;
+        cursor: pointer;
+        .material-icons{
+            font-size: 80px;
+            cursor: pointer;
+        }
+        &:hover{
+            color: darken($light-text, 15%);
+        }
+        &:active{
+            transform: scale(120%);
+        }
+    }
+}

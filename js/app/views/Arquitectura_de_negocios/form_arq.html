@@ -1,0 +1,76 @@
+<!--Controller as formCtrl -->
+
+<div class="fullscreen column" id="form" ng-class="{'fly-left': formCtrl.isHiding}" ng-swipe-left="mainCtrl.isMobile && formCtrl.nextTab()" ng-swipe-right="mainCtrl.isMobile && formCtrl.prevTab()" data-ng-scroll-up="formCtrl.nextTab()" ng-show="formCtrl.isShowing">
+
+    <div class="close-wrapper" ng-click="formCtrl.close()">
+            <i class="material-icons">&#xE888;</i>
+    </div>
+    <div class="form-wrapper row">
+
+        <div class="row card" id="card" ng-class="{'fly-from-left':formCtrl.isActiveTab(1), 'fly-left':!formCtrl.isActiveTab(1)}">
+            <form name="client-form" id="client-form" ng-submit="formCtrl.nextTab()" novalidate>
+                
+                <div class="form-group">
+                    <h2>Dinos ¿qué deseas mejorar en tu empresa?</h2>
+                    <textarea class="form-control" id="descrip" ng-attr-rows="{{row || '1'}}" ng-focus="row=5" ng-blur="row=1" placeholder="Escribe aquí tu comentario..." ng-model="formCtrl.description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <h2 ng-click="formCtrl.isActiveTab(1)" id="dummy">¿Cuál es tu presupuesto? </h2>
+                    <!-- ng-click="formCtrl.isActiveTab(1)" id="dummy" accion e id necesarios para actualizar el evento al hacer mouse scroll-->
+                    <div class="row">
+                        <input type="text" class="form-control" id="presupuesto" placeholder="Escribe tu cantidad" ng-model="formCtrl.budget" format="currency">
+                    </div>
+                </div>
+            </form>
+            <div class="img-wapper" >
+                <img src="resources/image/dummyAtencion.png" alt="atencion">
+            </div>
+        </div>
+
+        <div class="row card" id="" ng-class="{'fly-from-right':formCtrl.isActiveTab(2), 'fly-right':!formCtrl.isActiveTab(2)}">
+            
+            <div class="img-wapper col-sm-6">
+                <img src="resources/image/dummyOperador.png" alt="atención">
+            </div>
+
+            <form name="client-form-data" class="col-sm-6" id="client-form-data" ng-submit="formCtrl.nextTab()" novalidate>
+                
+                
+                <div class="form-group row">
+                    <h2 class="col-xs-3"> <img width="45px" src="resources/image/ic_account_circle_black_24px.svg" alt=""> </h2>
+                    <div class="col-xs-9 sm-input"><input type="text" class="form-control" ng-model="formCtrl.fullName" id="nombre" placeholder="Nombre y Apellido*" required></div>
+                </div>
+
+                <div class="form-group row">
+                    <h2 class="col-xs-3"> <img width="45px" src="resources/image/ic_business_black_24px.svg" alt=""> </h2>
+                    <div class="col-xs-9 sm-input"><input type="text" class="form-control" ng-model="formCtrl.bussiness" id="empresa" placeholder="Empresa"></div>
+                </div>
+
+                <div class="form-group row">
+                    <h2 class="col-xs-3"> <img width="45px" src="resources/image/ic_stay_primary_portrait_black_24px.svg" alt=""> </h2>
+                    <div class="col-xs-9 sm-input"><input type="number" class="form-control" ng-model="formCtrl.phone" id="telefono" placeholder="Número telefónico*" required></div>
+                </div>
+
+                <div class="form-group row">
+                    <h2 class="col-xs-3"> <img width="45px" src="resources/image/ic_mail_black_24px.svg" alt=""> </h2>
+                    <div class="col-xs-9 sm-input"><input type="email" class="form-control" ng-model="formCtrl.email" id="correo" placeholder="Correo electrónico*" required></div>
+                </div>
+
+            </form>
+
+            <div class="row col-sm-12 centered column">
+                <div class="button-container">
+                    <button class="btn btn-primary ">ENVIAR</button>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+
+    <div class="bread-crumbs row centered">
+        <div class="crumb" ng-class="{active:formCtrl.isActiveTab(1)}" ng-click="formCtrl.prevTab()">&nbsp;</div>
+        <div class="crumb" ng-class="{active:formCtrl.isActiveTab(2)}" ng-click="formCtrl.nextTab()">&nbsp;</div>
+    </div>
+</div>
